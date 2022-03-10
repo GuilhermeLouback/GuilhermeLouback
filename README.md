@@ -21,6 +21,7 @@
   <img align="center" alt="Gui-Python" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
   <img align="center" alt="Gui-Numpy" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg">
   <img align="center" alt="Gui-Csharp" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg">
+  <img align="center" alt="Gui-Jupiter" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 </div>
   
   ##
