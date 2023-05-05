@@ -5,7 +5,7 @@
 - 📜Certificações em Phyton, SQL, Data Science...
 - 📫 Email : guilherme_lou@hotmail.com ...
 
-<div align="center">
+<div align="center" display = "flex:auto">
   <a href="https://github.com/GuilhermeLouback">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=GuilhermeLouback&show_icons=true&theme=dark&include_all_commits=false&count_private=true"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GuilhermeLouback&layout=compact&langs_count=7&theme=dark"/>
