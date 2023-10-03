@@ -1,9 +1,68 @@
-<h1>Olá ! Meu nome é Guilherme Louback </h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Guilherme Louback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfólio de Guilherme Louback</h1>
+    </header>
+    <div class="container">
+        <h2>Sobre mim</h2>
+        <p>Olá, sou Guilherme Louback, um desenvolvedor Fullstack apaixonado por criar soluções web incríveis. Tenho experiência em desenvolvimento de aplicativos da web usando tecnologias como HTML, CSS, JavaScript, Node.js e banco de dados SQL e NoSQL.</p>
+        
+        <h2>Projetos</h2>
+        <p>Aqui estão alguns dos projetos em que trabalhei:</p>
+        <ul>
+            <li><a href="#">Projeto 1 - Link para o GitHub</a></li>
+            <li><a href="#">Projeto 2 - Link para o GitHub</a></li>
+            <li><a href="#">Projeto 3 - Link para o GitHub</a></li>
+        </ul>
 
-- 👨‍🎓 Atualmente estudante de Analise e Desenvolvimento de Sistemas 
-- 🌱 Estou aprendendo Python,SQL,C#...
-- 📜Certificações em Phyton, SQL, Data Science...
-- 📫 Email : guilherme_lou@hotmail.com ...
+        <h2>Contato</h2>
+        <p>Você pode me encontrar nas seguintes redes sociais:</p>
+        <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+
 
 <div align="center">
   <a href="https://github.com/GuilhermeLouback">
