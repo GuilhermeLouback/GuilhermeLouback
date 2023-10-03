@@ -8,7 +8,7 @@
 
 <div align="center">
   <a href="https://github.com/GuilhermeLouback">
-  <img height="300rem" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GuilhermeLouback&layout=compact&langs_count=7&theme=dark"/>
+  <img height="300rem" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GuilhermeLouback&layout=compact&langs_count=7&theme=light"/>
 </div>
   
   
@@ -19,6 +19,7 @@
   <img align="center" alt="Gui-Python" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
   <img align="center" alt="Gui-Js" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg">
   <img align="center" alt="Gui-Php" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+  <img align="center" alt="Gui-Laravel" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg">
   <img align="center" alt="Gui-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg">
 </div>
   
