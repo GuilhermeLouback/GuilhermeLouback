@@ -10,7 +10,7 @@
       <h3>🚀 Core Focus</h3>
       <p>Especialista na construção de ecossistemas <b>SaaS escaláveis</b>. Minha abordagem une a robustez do desenvolvimento backend com a agilidade de automações inteligentes e infraestrutura resiliente.</p>
       <ul>
-        <li><b>SaaS Founder:</b> Liderando o desenvolvimento do WaHive/Hivezapp.</li>
+        <li><b>SaaS Founder:</b> Liderando o desenvolvimento do Hivezapp.</li>
         <li><b>IA Enthusiast:</b> Integrando LLMs locais (DeepSeek/Ollama) em fluxos de produção.</li>
         <li><b>Automation:</b> Arquitetura de bots complexos via Puppeteer e n8n.</li>
       </ul>
