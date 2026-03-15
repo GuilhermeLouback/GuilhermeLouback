@@ -1,64 +1,68 @@
-# Olá, eu sou o Guilherme Louback! 👋
-
-### Software Developer | SaaS Founder | DevOps Enthusiast
-
-Sou um desenvolvedor focado em criar soluções escaláveis e automações inteligentes. Atualmente, dedico grande parte do meu tempo ao ecossistema do **WaHive/Hivezapp**, unindo desenvolvimento backend robusto com automação de processos.
-
----
-
-### 🚀 O que eu faço
-* **SaaS Development:** Construção e manutenção de plataformas completas (Node.js, Laravel, React).
-* **Automação e IA:** Implementação de agentes de IA locais (Ollama, DeepSeek) e fluxos no n8n.
-* **DevOps & Infra:** Gerenciamento de servidores, containers Docker, Kubernetes e túneis Cloudflare.
-* **Web Automation:** Especialista em Puppeteer e integração com APIs de mensageria.
-
----
-
-### 🛠️ Toolbox Técnica
-
-| Categoria | Tecnologias |
-| :--- | :--- |
-| **Linguagens** | JavaScript (ES6+), TypeScript, PHP, Python, C++ |
-| **Frameworks** | React, Next.js, Laravel, Express, NestJS |
-| **Banco de Dados** | MySQL, PostgreSQL, Redis |
-| **Infra & Tooling** | Docker, Kubernetes, Nginx, PM2, Zabbix, WSL2 |
-| **Low-Code/AI** | n8n, Ollama, LangChain |
-
----
-
-### 📊 Estatísticas e Tecnologias
-
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GuilhermeLouback&layout=compact&langs_count=7&theme=dark&hide_border=true&title_color=0077B5" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=GuilhermeLouback&show_icons=true&theme=dark&hide_border=true&count_private=true" />
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=0D1117&height=200&section=header&text=Guilherme%20Louback&fontSize=70&fontAlignY=45&animation=twinkling&desc=Full%20Stack%20Engineer%20|%20SaaS%20Architect%20|%20AI%20Automation&descSize=22&descAlignY=65" width="100%"/>
 </div>
 
 <br>
 
+<table align="center">
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🚀 Core Focus</h3>
+      <p>Especialista na construção de ecossistemas <b>SaaS escaláveis</b>. Minha abordagem une a robustez do desenvolvimento backend com a agilidade de automações inteligentes e infraestrutura resiliente.</p>
+      <ul>
+        <li><b>SaaS Founder:</b> Liderando o desenvolvimento do WaHive/Hivezapp.</li>
+        <li><b>IA Enthusiast:</b> Integrando LLMs locais (DeepSeek/Ollama) em fluxos de produção.</li>
+        <li><b>Automation:</b> Arquitetura de bots complexos via Puppeteer e n8n.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h3>💻 Current Tech Stack</h3>
+      <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+      <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+      <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
+      <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+      <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+    </td>
+  </tr>
+</table>
+
+---
+
+### 🛠️ Infrastructure & Ops Ecosystem
+*Gerenciando ambientes complexos de ponta a ponta.*
+
+| Area | Technologies |
+| :--- | :--- |
+| **Backend & APIs** | Node.js (Express/Nest), Laravel, Puppeteer, WebSockets |
+| **DevOps & Cloud** | Kubernetes, Docker, Nginx, Cloudflare Tunnels, PM2 |
+| **Monitoring & CI** | Zabbix, GitHub Actions, Linux (Ubuntu/WSL2) |
+| **AI & Low-Code** | Self-hosted n8n, Ollama (DeepSeek/Qwen), Agentic Workflows |
+
+---
+
+### 📈 System Metrics
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" width="40" alt="javascript" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="30" width="40" alt="typescript" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="30" width="40" alt="nodejs" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="30" width="40" alt="php" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" height="30" width="40" alt="laravel" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" width="40" alt="react" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="30" width="40" alt="docker" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" height="30" width="40" alt="postgresql" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="30" width="40" alt="linux" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=GuilhermeLouback&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GuilhermeLouback&layout=compact&langs_count=8&theme=tokyonight&hide_border=true" />
 </div>
 
 ---
 
-### 📫 Vamos Conversar?
+### 🏗️ Projetos em Destaque
+- **WaHive/Hivezapp:** Plataforma de automação e mensageria escalável.
+- **AI-Driven Audit System:** Agentes de IA para processamento e geração de relatórios técnicos estruturais em JSON/PDF.
+- **Self-Hosted Flow:** Arquitetura de automação segura expondo serviços via Cloudflare e containers isolados.
 
-<div align="left">
-  <a href="https://www.linkedin.com/in/guilherme-louback-45b530218/" target="_blank">
-    <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="https://www.instagram.com/guilherme_lou/" target="_blank">
-    <img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
-  </a>
-  <a href="mailto:guilherme_lou@hotmail.com">
-    <img src="https://img.shields.io/badge/-Email-%23333?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
+---
+
+### 📫 Connect with me
+<p align="left">
+  <a href="https://www.linkedin.com/in/guilherme-louback-45b530218/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:guilherme_lou@hotmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://www.instagram.com/guilherme_lou/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
+</p>
+
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight&quote=Inovação%20é%20o%20que%20distingue%20um%20líder%20de%20um%20seguidor." />
 </div>
