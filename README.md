@@ -53,7 +53,7 @@
 
 <!-- substitua o bloco System Metrics por: -->
 <br>
-### 📈 System Metrics</h3>
+### 📈 System Metrics
 <div align="center">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=GuilhermeLouback&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true&bg_color=0D1117" />
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=GuilhermeLouback&layout=compact&langs_count=8&theme=radical&hide_border=true&bg_color=0D1117" />
