@@ -9,10 +9,20 @@
 // A Action .github/workflows/perfil.yml roda isso duas vezes por dia e publica o
 // resultado no branch "output".
 //
-// Cada imagem sai em dois temas (escuro, claro) e duas larguras (desktop, celular).
+// Cada imagem sai em dois temas (escuro, claro) e duas larguras. A larga é desenhada
+// com 1200 de largura e aparece com no máximo 846 px, a largura do README em telas
+// de 1280 px ou mais; os textos dela têm pelo menos 17 para ficar com 12 px na tela.
+// A "celular" é desenhada com 600 e serve a qualquer coluna estreita (celular,
+// tablet, janela pequena); no celular ela aparece com uns 300 px, daí textos de 21+.
 // No README, o tema é escolhido pelo sufixo #gh-dark-mode-only / #gh-light-mode-only
 // no link em volta da imagem (o CSS do GitHub esconde o outro, inclusive com tema
-// fixo nas configurações) e a largura por <source media="(max-width: 600px)">.
+// fixo nas configurações) e a largura por <source media="(max-width: ...)">.
+// O media olha a tela, não o README, e o GitHub estreita o README quando põe a
+// barra lateral ao lado. Largura do README medida em github.com: tela − 82 px até
+// 767 px de tela, tela − 370 de 768 a 1011, tela − 434 de 1012 a 1279, 846 daí em
+// diante. Por isso o mapa e o gráfico trocam de versão em 1193 px de tela (README
+// abaixo de 760) e aparecem sem width, no tamanho natural limitado ao README; o
+// cabeçalho e os botões, que não têm texto miúdo, trocam em 600 px.
 // Não use (prefers-color-scheme) no <source>: com tema fixo, o componente
 // themed-picture do GitHub troca o media inteiro e a condição de largura se perde.
 // Os textos viram contornos a partir de
@@ -199,12 +209,19 @@ const MAP_TITLE = 'Mapa da stack: cada linha é um projeto (Wolfpack, HiveZapp e
 
 function mapaDesktop(t) {
   const W = 1200;
-  const H = 384;
   const stroke = 14;
-  const track = { W: 222, H: 262, S: 302 };
+  const labelSize = 21;
+  const nameSize = 18;
   const { stations, zones } = layout(200, 40, 26);
+  // Os rótulos sobem a 45° a partir de 22 px acima da primeira linha: o mais longo
+  // decide se ela precisa descer.
+  const rise = Math.max(...stations.map((s) => measure('text', s.label, labelSize))) * Math.SQRT1_2;
+  const top = Math.max(222, Math.ceil(rise + 22 + 18));
+  const track = { W: top, H: top + 40, S: top + 80 };
+  const by = track.S + stroke / 2 + 24;
+  const H = by + 27 + 24;
   const end = stations.at(-1).pos + 64;
-  const badge = Math.ceil(Math.max(...LINES.map((l) => measure('bold', l.name, 16))) + 30);
+  const badge = Math.ceil(Math.max(...LINES.map((l) => measure('bold', l.name, nameSize))) + 32);
   const svg = new Svg(W, H, MAP_TITLE);
 
   // Ligações finas atrás das linhas: a linha que não para ali passa por cima.
@@ -228,17 +245,16 @@ function mapaDesktop(t) {
     }
   }
   for (const s of stations) {
-    text(svg, 'text', s.label, 17, s.pos - 3, track.W - stroke / 2 - 15, { fill: t.ink, rotate: -45 });
+    text(svg, 'text', s.label, labelSize, s.pos - 3, track.W - stroke / 2 - 15, { fill: t.ink, rotate: -45 });
   }
   for (const line of LINES) {
     const y = track[line.id];
-    svg.add(`<rect x="0" y="${y - 15}" width="${badge}" height="30" rx="15" fill="${t[line.id]}"/>`);
-    text(svg, 'bold', line.name, 16, badge / 2, y + capCenter('bold', 16), { fill: NIGHT, anchor: 'middle' });
+    svg.add(`<rect x="0" y="${y - 17}" width="${badge}" height="34" rx="17" fill="${t[line.id]}"/>`);
+    text(svg, 'bold', line.name, nameSize, badge / 2, y + capCenter('bold', nameSize), { fill: NIGHT, anchor: 'middle' });
   }
-  const by = track.S + stroke / 2 + 24;
   for (const z of zones) {
     svg.add(`<path d="M${z.from - 12} ${by - 7} V${by} H${z.to + 12} V${by - 7}" fill="none" stroke="${t.faint}" stroke-width="1.5"/>`);
-    text(svg, 'bold', z.name, 15, (z.from + z.to) / 2, by + 26, { fill: t.dim, anchor: 'middle' });
+    text(svg, 'bold', z.name, nameSize, (z.from + z.to) / 2, by + 27, { fill: t.dim, anchor: 'middle' });
   }
   return svg;
 }
@@ -248,7 +264,7 @@ function mapaCelular(t) {
   const stroke = 12;
   const track = { W: 40, H: 76, S: 112 };
   const labelX = 156;
-  const { stations, zones } = layout(232, 50, 76);
+  const { stations, zones } = layout(232, 50, 80);
   const H = stations.at(-1).pos + 56;
   const svg = new Svg(W, H, MAP_TITLE);
 
@@ -277,19 +293,20 @@ function mapaCelular(t) {
     text(svg, 'text', s.label, 23, labelX, s.pos + capCenter('text', 23), { fill: t.ink });
   }
   for (const z of zones) {
-    text(svg, 'bold', z.name, 18, labelX, z.from - 40, { fill: t.dim });
+    text(svg, 'bold', z.name, 22, labelX, z.from - 36, { fill: t.dim });
   }
   return svg;
 }
 
 // ------------------------------------------------------------------- botões
 
-// Os botões têm uma versão só, legível nos dois temas: o link de e-mail não
-// pode levar o sufixo #gh-*-mode-only que o README usa para trocar de tema.
-function botao(label, primario) {
-  const size = 16;
-  const h = 40;
-  const w = Math.ceil(measure('bold', label, size) + 36);
+// Os botões têm um tema só, legível nos dois: o link de e-mail não pode levar o
+// sufixo #gh-*-mode-only que o README usa para trocar de tema. A versão celular,
+// menor, deixa os três numa linha a partir de 360 px de tela (README de 278).
+function botao(label, primario, celular) {
+  const size = celular ? 14 : 16;
+  const h = celular ? 36 : 40;
+  const w = Math.ceil(measure('bold', label, size) + (celular ? 24 : 36));
   const svg = new Svg(w, h, label);
   const baseline = h / 2 + capCenter('bold', size);
   if (primario) {
@@ -366,11 +383,11 @@ function barPath(x, y, w, h, r) {
 
 function atividade(t, celular, a) {
   const W = celular ? 600 : 1200;
-  const H = celular ? 480 : 300;
+  const H = celular ? 500 : 300;
   const svg = new Svg(W, H, `Atividade no GitHub: ${fmt(a.total)} contribuições nos últimos 12 meses`);
   const s = celular
-    ? { big: 104, bigY: 104, sub: 22, subY: 144, stat: 32, statY: 214, statSub: 19, statGap: 260, date: 17, area: { x: 0, w: 600, base: 424, h: 150 }, month: 17, maxLabel: 18 }
-    : { big: 104, bigY: 108, sub: 19, subY: 146, stat: 27, statY: 210, statSub: 15, statGap: 190, date: 13, area: { x: 420, w: 780, base: 250, h: 194 }, month: 14, maxLabel: 15 };
+    ? { big: 104, bigY: 104, sub: 24, subY: 146, stat: 34, statY: 220, statSub: 22, statGap: 270, date: 21, area: { x: 0, w: 600, base: 446, h: 150 }, month: 21, maxLabel: 22 }
+    : { big: 104, bigY: 108, sub: 21, subY: 148, stat: 30, statY: 212, statSub: 18, statGap: 210, date: 17, area: { x: 420, w: 780, base: 250, h: 190 }, month: 17, maxLabel: 18 };
 
   text(svg, 'display', fmt(a.total), s.big, 0, s.bigY, { fill: t.ink });
   text(svg, 'text', 'contribuições nos últimos 12 meses', s.sub, 0, s.subY, { fill: t.dim });
@@ -430,9 +447,10 @@ if (mode === 'estatico') {
     save(dir, `mapa-${name}.svg`, mapaDesktop(t));
     save(dir, `mapa-${name}-celular.svg`, mapaCelular(t));
   }
-  save(dir, 'botao-site.svg', botao('gloubapp.com', true));
-  save(dir, 'botao-linkedin.svg', botao('LinkedIn', false));
-  save(dir, 'botao-email.svg', botao('E-mail', false));
+  for (const [file, label, primario] of [['site', 'gloubapp.com', true], ['linkedin', 'LinkedIn', false], ['email', 'E-mail', false]]) {
+    save(dir, `botao-${file}.svg`, botao(label, primario, false));
+    save(dir, `botao-${file}-celular.svg`, botao(label, primario, true));
+  }
 } else if (mode === 'atividade') {
   const token = process.env.GITHUB_TOKEN;
   if (!token) {
