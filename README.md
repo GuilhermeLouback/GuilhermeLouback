@@ -1,7 +1,7 @@
 <a href="https://gloubapp.com#gh-dark-mode-only"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/GuilhermeLouback/GuilhermeLouback/main/assets/cabecalho-escuro-celular.svg"><img alt="Guilherme Louback" src="https://raw.githubusercontent.com/GuilhermeLouback/GuilhermeLouback/main/assets/cabecalho-escuro.svg" width="100%"></picture></a>
 <a href="https://gloubapp.com#gh-light-mode-only"><picture><source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/GuilhermeLouback/GuilhermeLouback/main/assets/cabecalho-claro-celular.svg"><img alt="Guilherme Louback" src="https://raw.githubusercontent.com/GuilhermeLouback/GuilhermeLouback/main/assets/cabecalho-claro.svg" width="100%"></picture></a>
 
-Sou engenheiro de software full stack e construo produtos SaaS de ponta a ponta, do banco de dados ao deploy. Meu terreno é mensageria, tempo real e automação com IA.
+Sou engenheiro de software full stack e trabalho de ponta a ponta, do banco de dados ao deploy, em produtos SaaS, sistemas sob medida para empresas e apps desktop. Meu terreno é mensageria, tempo real e automação com IA.
 
 Hoje toco dois produtos meus, o **HiveZapp** e o **Wolfpack**, e desenvolvo sistemas sob medida que rodam em produção numa empresa de engenharia.
 
