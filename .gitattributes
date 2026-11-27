@@ -1,0 +1,5 @@
+* text=auto eol=lf
+
+# Arquivos gerados por .github/profile/render.mjs e glyphs.py
+assets/*.svg linguist-generated -diff
+.github/profile/glyphs.json linguist-generated -diff
